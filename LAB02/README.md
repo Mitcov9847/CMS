@@ -134,6 +134,7 @@ WPForms.
 Для размещения формы был использован shortcode:
 [wpforms id="6"]
 ![photo_5317000673448628660_w](https://github.com/user-attachments/assets/1a82dfd5-6f39-421c-9f05-672327b5a02d)
+<img width="2169" height="946" alt="image" src="https://github.com/user-attachments/assets/198975ba-7e2a-421f-89e4-f4f98af4e7e6" />
 
 После публикации страницы форма стала доступна для пользователей сайта.
 Также были созданы несколько записей в разделе **Записи**, содержащие текст и изображения.
