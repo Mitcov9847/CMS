@@ -95,35 +95,49 @@ define('WP_DEBUG', true);
 ### Шаг 4. Файл функций functions.php
 <img width="600" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
 
-#### Пояснение:
+---
+
+Пояснение:
 Подключает стили темы (style.css).
 Регистрирует меню для боковой панели.
 
+---
 ### Шаг 5. Дополнительные шаблоны
 
 #### - single.php — страница сайта
 <img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
+
+---
 - Боковая панель сайта.
 - Содержит блок навигации `<aside>`.
 - Список ссылок `<ul>` и `<li>` создаёт пункты меню.
 - `home_url()` возвращает URL главной страницы сайта.
 - Используется в шаблонах через `get_sidebar()`.
-- 
+
+  ---
+  
 #### - page.php — страница сайта
 <img width="600" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
+
+---
 - Шаблон для статических страниц сайта (например, «О нас» или «Контакты»).
 - Структура почти идентична `single.php`.
 - Использует цикл WordPress для вывода заголовка (`the_title()`) и содержимого страницы (`the_content()`).
 - Подключает боковую панель и подвал.
-- 
+  
+---
+
 #### - sidebar.php — боковая панель
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
+
+---
 - Боковая панель сайта.
 - Содержит блок навигации `<aside>`.
 - Список ссылок `<ul>` и `<li>` создаёт пункты меню.
 - `home_url()` возвращает URL главной страницы сайта.
 - Используется в шаблонах через `get_sidebar()`.
-- 
+
+  ---
 ### Шаг 6. Стилизация темы
 
 На данном этапе мы добавляем оформление для всех основных элементов темы WordPress. Файл `style.css` содержит CSS-правила для:
@@ -172,13 +186,14 @@ footer{
 Структура папки темы после добавления изображения имеет следующий вид:
 ```
 <img width="248" height="442" alt="image" src="https://github.com/user-attachments/assets/2ea3b25e-b860-4c4d-921d-9603538afee0" />
-
+```
 
 ### Шаг 8. Активация темы
 Перейти в Appearance → Themes.
 Найти тему USM Theme.
 Нажать Activate.
 Открыть главную страницу сайта и проверить отображение темы.
+
 <img width="1419" height="1108" alt="image" src="https://github.com/user-attachments/assets/e0ce6c66-5612-46e8-84a1-d75c002c22f9" />
 
 ![photo_5332303860967609432_w](https://github.com/user-attachments/assets/dcc326ef-4de4-4c5c-b4ff-b7f8c745b6ff)
