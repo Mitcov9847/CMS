@@ -69,6 +69,7 @@ define('WP_DEBUG', true);
 ---
 
 ### Шаг 3. Общие части шаблонов
+
 ## 3. `header.php`
 <img width="600" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
 
@@ -94,13 +95,10 @@ define('WP_DEBUG', true);
 ### Шаг 4. Файл функций functions.php
 <img width="600" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
 
----
-
 Пояснение:
 Подключает стили темы (style.css).
 Регистрирует меню для боковой панели.
 
----
 ### Шаг 5. Дополнительные шаблоны
 
 #### - single.php — страница сайта
@@ -113,7 +111,7 @@ define('WP_DEBUG', true);
 - `home_url()` возвращает URL главной страницы сайта.
 - Используется в шаблонах через `get_sidebar()`.
 
-  ---
+---
   
 #### - page.php — страница сайта
 <img width="600" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
