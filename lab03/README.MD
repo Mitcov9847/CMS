@@ -1,15 +1,22 @@
-Лабораторная работа №3
-Разработка простой темы WordPress
-Цель работы
+# Лабораторная работа №3
+## Разработка простой темы WordPress
 
+### Цель работы
 Научиться создавать собственную тему WordPress, разобраться в её минимальной структуре и принципах работы шаблонов.
 
-Шаг 1. Подготовка среды
-В локальной установке WordPress перешёл в папку:
+---
+
+## Шаг 1. Подготовка среды
+1. В локальной установке WordPress перешёл в папку:  
+
 wp-content/themes
-Создал директорию для темы:
+
+2. Создал директорию для темы:
+
 usm-theme
-Включил отладку в wp-config.php для отображения ошибок:
+
+3. Включил отладку в `wp-config.php`:
+```php
 define('WP_DEBUG', true);
 
 Скриншот:
@@ -19,7 +26,7 @@ define('WP_DEBUG', true);
 Это позволяет создавать тему и сразу видеть ошибки в коде, чтобы корректно её настраивать.
 
 Шаг 2. Создание обязательных файлов темы
-В папке темы создал файл style.css с метаданными:
+style.css
 /*
 Theme Name: USM Theme
 Author: Евгений Митков
@@ -31,7 +38,7 @@ body {
     margin: 0;
     padding: 0;
 }
-Создал файл index.php с базовой HTML-структурой:
+index.php
 <?php get_header(); ?>
 
 <div class="container">
@@ -80,12 +87,6 @@ footer.php
 </body>
 </html>
 
-Пояснение:
-
-get_header() подключает шапку сайта
-get_footer() подключает подвал
-Общие части используются на всех страницах для единообразия
-
 Скриншот:
 
 
@@ -102,11 +103,6 @@ function usm_theme_menus() {
     ));
 }
 add_action('after_setup_theme', 'usm_theme_menus');
-
-Пояснение:
-
-Подключение стилей темы через wp_enqueue_style
-Регистрация меню для боковой панели
 Шаг 5. Дополнительные шаблоны
 single.php
 <?php get_header(); ?>
@@ -147,9 +143,6 @@ sidebar.php (только навигация)
     </ul>
 </aside>
 
-Пояснение:
-Боковая панель показывает только нужные ссылки: Главная → О нас → Записи.
-
 Скриншот:
 
 
@@ -173,9 +166,6 @@ archive.php
 </div>
 <?php get_footer(); ?>
 Шаг 6. Стилизация темы
-
-Пример базовых стилей в style.css:
-
 body { font-family: Arial, sans-serif; margin:0; padding:0; }
 header, footer { background:#333; color:#fff; padding:15px; text-align:center; }
 .container { display:flex; gap:20px; padding:20px; }
@@ -197,7 +187,6 @@ header, footer { background:#333; color:#fff; padding:15px; text-align:center; }
 WordPress → Внешний вид → Темы
 Найти тему USM Theme
 Нажать Активировать
-Проверить работу сайта на главной, страницах, записях
 
 Скриншот:
 
