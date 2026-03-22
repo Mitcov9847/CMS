@@ -17,7 +17,7 @@ usm-theme
 3. Включил отладку в `wp-config.php`:
 ```php
 define('WP_DEBUG', true);
-
+```
 Скриншот:
 
 
@@ -27,6 +27,7 @@ define('WP_DEBUG', true);
 Шаг 2. Создание обязательных файлов темы
 style.css
 /*
+```
 Theme Name: USM Theme
 Author: Евгений Митков
 Description: Простая тема для лабораторной работы №3
@@ -37,7 +38,9 @@ body {
     margin: 0;
     padding: 0;
 }
+```
 index.php
+```
 <?php get_header(); ?>
 
 <div class="container">
@@ -55,7 +58,7 @@ index.php
     </main>
     <?php get_sidebar(); ?>
 </div>
-
+```
 <?php get_footer(); ?>
 
 Скриншот:
