@@ -38,7 +38,7 @@ define('WP_DEBUG', true);
 
 <img width="200" height="132" alt="image" src="https://github.com/user-attachments/assets/4570c5f1-0529-459b-8a76-36d5651ebedd" />
 
-
+---
 ## 1. `style.css`
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
 - Содержит метаданные темы: название, автор, описание, версия.
