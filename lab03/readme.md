@@ -50,40 +50,40 @@ usm-theme/
 ```
 <img width="1288" height="756" alt="image" src="https://github.com/user-attachments/assets/71fe724b-cc16-4484-a372-bcf344fb5fc6" />
 
-###### Файл style.css
+#### Файл style.css
 <img width="625" height="858" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
 
-###### Файл index.php
+#### Файл index.php
 <img width="774" height="836" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
 
 
-###### Пояснение:
+#### Пояснение:
 get_header() и get_footer() подключают шапку и подвал.
 WordPress Loop (have_posts() / the_post()) выводит последние записи.
 $count ограничивает количество выводимых постов.
 
 ### Шаг 3. Общие части шаблонов
-Файл header.php
+#### Файл header.php
 <img width="754" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
 
-Файл footer.php
+#### Файл footer.php
 <img width="704" height="317" alt="image" src="https://github.com/user-attachments/assets/3a77b861-d443-4383-ac3a-2b8fe6cef07d" />
 
 ### Шаг 4. Файл функций functions.php
 <img width="735" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
-Пояснение:
+#### Пояснение:
 Подключает стили темы (style.css).
 Регистрирует меню для боковой панели.
 
 ### Шаг 5. Дополнительные шаблоны
 
-##### .php — страница сайта
+#### .php — страница сайта
 <img width="735" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
 
-##### page.php — страница сайта
+#### page.php — страница сайта
 <img width="754" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
 
-##### sidebar.php — боковая панель
+#### sidebar.php — боковая панель
 <img width="757" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
 
 ### Шаг 6. Стилизация темы
