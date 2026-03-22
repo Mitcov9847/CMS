@@ -76,12 +76,14 @@ $count ограничивает количество выводимых пост
 Регистрирует меню для боковой панели.
 
 ### Шаг 5. Дополнительные шаблоны
+
+##### .php — страница сайта
 <img width="735" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
 
-###### page.php — страница сайта
+##### page.php — страница сайта
 <img width="754" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
 
-###### sidebar.php — боковая панель
+##### sidebar.php — боковая панель
 <img width="757" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
 
 ### Шаг 6. Стилизация темы
