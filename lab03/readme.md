@@ -35,7 +35,6 @@ define('WP_DEBUG', true);
 
 Структура папки темы после создания:
 
-<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/71fe724b-cc16-4484-a372-bcf344fb5fc6" />
 
 #### Файл style.css
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
@@ -114,8 +113,18 @@ footer{
     padding:20px;
 }
 ```
+### Шаг 7. Скриншот темы
+Для корректного отображения темы в административной панели WordPress необходимо добавить изображение-превью темы.
+Данный файл используется системой WordPress для отображения предварительного просмотра темы в разделе управления темами.
 
-### Шаг 7. Активация темы
+Файл необходимо разместить непосредственно в директории темы.
+
+Структура папки темы после добавления изображения имеет следующий вид:
+```
+<img width="248" height="442" alt="image" src="https://github.com/user-attachments/assets/2ea3b25e-b860-4c4d-921d-9603538afee0" />
+
+
+### Шаг 8. Активация темы
 Перейти в Appearance → Themes.
 Найти тему USM Theme.
 Нажать Activate.
