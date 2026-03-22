@@ -24,6 +24,7 @@
 ```php
 define('WP_DEBUG', true);
 ```
+<img width="1266" height="149" alt="image" src="https://github.com/user-attachments/assets/dacdaff6-1d38-436d-9b39-730740ce414e" />
 
 Это позволяет видеть ошибки и предупреждения для упрощения разработки.
 
