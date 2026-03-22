@@ -69,6 +69,7 @@ index.php — основной шаблон темы, здесь выводят�
 
 Шаг 3. Общие части шаблонов
 header.php
+```
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -88,11 +89,12 @@ footer.php
 <?php wp_footer(); ?>
 </body>
 </html>
-
+```
 Скриншот:
 
 
 Шаг 4. Файл функций (functions.php)
+```
 <?php
 function usm_theme_styles() {
     wp_enqueue_style('usm-style', get_stylesheet_uri());
@@ -105,8 +107,10 @@ function usm_theme_menus() {
     ));
 }
 add_action('after_setup_theme', 'usm_theme_menus');
+```
 Шаг 5. Дополнительные шаблоны
 single.php
+```
 <?php get_header(); ?>
 <div class="container">
     <main class="content">
@@ -144,11 +148,12 @@ sidebar.php (только навигация)
         <li><a href="<?php echo get_permalink(get_option('page_for_posts')) ?: home_url(); ?>">Записи</a></li>
     </ul>
 </aside>
-
+```
 Скриншот:
 
 
 comments.php
+```
 <?php
 if ( comments_open() || get_comments_number() ) :
     comments_template();
@@ -177,7 +182,7 @@ header, footer { background:#333; color:#fff; padding:15px; text-align:center; }
 .sidebar-menu { list-style:none; padding:0; }
 .sidebar-menu li { margin-bottom:10px; }
 .sidebar-menu a { text-decoration:none; color:#333; }
-
+```
 Скриншот:
 
 
