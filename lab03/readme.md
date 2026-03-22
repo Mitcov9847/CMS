@@ -49,7 +49,7 @@ define('WP_DEBUG', true);
   - `.sidebar-box` — стили боковой панели.
   - `.comments-area` и `.comment-respond` — оформление комментариев и формы их добавления.
 - Позволяет задать сетку, тени, отступы и визуальное оформление блоков.
-
+---
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/73763a76-c444-4b72-9fe0-442ee6d5d0ad" />
 
 ## 2. `index.php`
@@ -62,7 +62,7 @@ define('WP_DEBUG', true);
   - `.sidebar-box` — стили боковой панели.
   - `.comments-area` и `.comment-respond` — оформление комментариев и формы их добавления.
 - Позволяет задать сетку, тени, отступы и визуальное оформление блоков.
-
+---
 ### Шаг 3. Общие части шаблонов
 ## 3. `header.php`
 <img width="600" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
@@ -71,14 +71,14 @@ define('WP_DEBUG', true);
 - `bloginfo('name')` выводит название сайта, `bloginfo('description')` — описание.
 - `wp_head()` подключает стили, скрипты и плагины WordPress.
 - Начало основного блока сайта обёрнуто в `<main>`.
-- 
+---
 #### - Файл footer.php
 <img width="600" height="317" alt="image" src="https://github.com/user-attachments/assets/3a77b861-d443-4383-ac3a-2b8fe6cef07d" />
 - Содержит подвал сайта и завершает структуру страницы.
 - Выводит текущий год через `date('Y')`.
 - `wp_footer()` подключает скрипты и необходимые элементы перед закрытием страницы.
 - Закрывает теги `main`, `footer`, `body` и `html`.
-
+---
 ### Шаг 4. Файл функций functions.php
 <img width="600" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
 #### Пояснение:
