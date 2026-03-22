@@ -34,6 +34,7 @@ define('WP_DEBUG', true);
 2. index.php — главный шаблон темы, выводит контент сайта.
 
 Структура папки темы после создания:
+<img width="261" height="132" alt="image" src="https://github.com/user-attachments/assets/4570c5f1-0529-459b-8a76-36d5651ebedd" />
 
 
 #### Файл style.css
