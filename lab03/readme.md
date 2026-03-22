@@ -41,6 +41,7 @@ define('WP_DEBUG', true);
 
 ## 1. `style.css`
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/73763a76-c444-4b72-9fe0-442ee6d5d0ad" />
 
 ---
 - Содержит метаданные темы: название, автор, описание, версия.
@@ -52,8 +53,6 @@ define('WP_DEBUG', true);
   - `.comments-area` и `.comment-respond` — оформление комментариев и формы их добавления.
 - Позволяет задать сетку, тени, отступы и визуальное оформление блоков.
 ---
-
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/73763a76-c444-4b72-9fe0-442ee6d5d0ad" />
 
 ## 2. `index.php`
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
