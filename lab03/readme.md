@@ -34,20 +34,7 @@ define('WP_DEBUG', true);
 2. index.php — главный шаблон темы, выводит контент сайта.
 
 Структура папки темы после создания:
-```
-usm-theme/
-    archive.php
-    comments.php
-    footer.php
-    functions.php
-    header.php
-    index.php
-    page.php
-    sidebar.php
-    single.php
-    style.css
-    screenshot.png
-```
+
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/71fe724b-cc16-4484-a372-bcf344fb5fc6" />
 
 #### Файл style.css
