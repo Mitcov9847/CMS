@@ -1,75 +1,105 @@
-# Лабораторная работа №3
-## Разработка простой темы WordPress
+# Лабораторная работа №3: Разработка простой темы WordPress
 
-### Цель работы
-Научиться создавать собственную тему WordPress, разобраться в её минимальной структуре и принципах работы шаблонов.
+## Цель работы
+Научиться создавать собственную тему WordPress, разобраться в минимальной структуре темы и принципах работы шаблонов.
 
+---
 
-## Шаг 1. Подготовка среды
-1. В локальной установке WordPress перешёл в папку:  
+## Инструкция по запуску
+1. Установить WordPress.
+2. Скопировать папку темы `usm-theme` в `wp-content/themes`.
+3. Активировать тему в разделе **Appearance → Themes (Внешний вид → Темы)**.
 
-wp-content/themes
+---
 
-2. Создал директорию для темы:
+## Ход работы
 
-usm-theme
+### Шаг 1. Подготовка среды
+Перед началом разработки необходимо подготовить рабочую среду:
 
-3. Включил отладку в `wp-config.php`:
+- Используется локальный сервер XAMPP с Apache и MySQL (MariaDB).
+- Проверена работа WordPress.
+- В папке `wp-content/themes` создана директория темы: `usm-theme`.
+
+**Скриншот VS Code:**  
+![Подготовка среды](./screenshots/step1.png)
+
+Включён режим отладки WordPress, изменён параметр в `wp-config.php`:
+
 ```php
 define('WP_DEBUG', true);
-```
-Скриншот:
 
-
-Пояснение:
-Это позволяет создавать тему и сразу видеть ошибки в коде, чтобы корректно её настраивать.
+Это позволяет видеть ошибки и предупреждения для упрощения разработки.
 
 Шаг 2. Создание обязательных файлов темы
-style.css
+
+Минимальная тема WordPress должна содержать два файла:
+
+style.css — содержит метаданные темы и базовые стили.
+index.php — главный шаблон темы, выводит контент сайта.
+
+Структура папки темы после создания:
+
+usm-theme/
+    style.css
+    index.php
+Файл style.css
+
+Пример содержимого:
+
 /*
-```
 Theme Name: USM Theme
-Author: Евгений Митков
-Description: Простая тема для лабораторной работы №3
+Author: Student
+Description: Простая тема WordPress для лабораторной работы
 Version: 1.0
 */
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-```
-index.php
-```
+
+Скриншот VS Code:
+
+
+Файл index.php
+
+Пример содержимого:
+
 <?php get_header(); ?>
 
-<div class="container">
-    <main class="content">
-        <?php
-        $args = array('posts_per_page' => 5);
-        $latest_posts = new WP_Query($args);
-        if ($latest_posts->have_posts()) :
-            while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
-                <article class="post">
-                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <div><?php the_excerpt(); ?></div>
-                </article>
-        <?php endwhile; endif; wp_reset_postdata(); ?>
-    </main>
-    <?php get_sidebar(); ?>
-</div>
-```
+<section class="posts-section">
+    <h2>Последние записи</h2>
+
+    <?php
+    $count = 0;
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            if ($count == 5) break;
+    ?>
+        <div class="post-card">
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <p><?php the_excerpt(); ?></p>
+        </div>
+    <?php
+            $count++;
+        endwhile;
+    endif;
+    ?>
+</section>
+
 <?php get_footer(); ?>
 
-Скриншот:
+Скриншот VS Code:
 
 
 Пояснение:
-index.php — основной шаблон темы, здесь выводятся последние 5 постов с помощью стандартного цикла WordPress.
 
+get_header() и get_footer() подключают шапку и подвал.
+WordPress Loop (have_posts() / the_post()) выводит последние записи.
+$count ограничивает количество выводимых постов.
 Шаг 3. Общие части шаблонов
-header.php
-```
+Файл header.php
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -82,19 +112,24 @@ header.php
     <h1><?php bloginfo('name'); ?></h1>
     <p><?php bloginfo('description'); ?></p>
 </header>
-footer.php
+<main>
+
+Скриншот VS Code:
+
+
+Файл footer.php
+</main>
 <footer>
-    <p>&copy; <?php echo date('Y'); ?> USM Theme</p>
+    <p>© <?php echo date('Y'); ?> USM Theme</p>
 </footer>
 <?php wp_footer(); ?>
 </body>
 </html>
-```
-Скриншот:
+
+Скриншот VS Code:
 
 
-Шаг 4. Файл функций (functions.php)
-```
+Шаг 4. Файл функций functions.php
 <?php
 function usm_theme_styles() {
     wp_enqueue_style('usm-style', get_stylesheet_uri());
@@ -107,116 +142,116 @@ function usm_theme_menus() {
     ));
 }
 add_action('after_setup_theme', 'usm_theme_menus');
-```
+
+Скриншот VS Code:
+
+
+Пояснение:
+
+Подключает стили темы (style.css).
+Регистрирует меню для боковой панели.
 Шаг 5. Дополнительные шаблоны
-single.php
-```
+single.php — отдельная запись
 <?php get_header(); ?>
-<div class="container">
-    <main class="content">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <article class="post">
-                <h2><?php the_title(); ?></h2>
+<section class="content-page">
+    <div class="content-main">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <article>
+                <h3><?php the_title(); ?></h3>
                 <div><?php the_content(); ?></div>
             </article>
             <?php comments_template(); ?>
         <?php endwhile; endif; ?>
-    </main>
-    <?php get_sidebar(); ?>
-</div>
+    </div>
+    <div class="content-side"><?php get_sidebar(); ?></div>
+</section>
 <?php get_footer(); ?>
-page.php
+page.php — страница сайта
 <?php get_header(); ?>
-<div class="container">
-    <main class="content">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <article class="page">
-                <h2><?php the_title(); ?></h2>
+<section class="content-page">
+    <div class="content-main">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <article>
+                <h3><?php the_title(); ?></h3>
                 <div><?php the_content(); ?></div>
             </article>
         <?php endwhile; endif; ?>
-    </main>
-    <?php get_sidebar(); ?>
-</div>
+    </div>
+    <div class="content-side"><?php get_sidebar(); ?></div>
+</section>
 <?php get_footer(); ?>
-sidebar.php (только навигация)
-<aside class="sidebar">
+sidebar.php — боковая панель
+<aside class="sidebar-box">
     <h3>Навигация</h3>
-    <ul class="sidebar-menu">
+    <ul>
         <li><a href="<?php echo home_url(); ?>">Главная</a></li>
-        <li><a href="<?php echo get_permalink(get_page_by_title('О нас')); ?>">О нас</a></li>
-        <li><a href="<?php echo get_permalink(get_option('page_for_posts')) ?: home_url(); ?>">Записи</a></li>
+        <li><a href="<?php echo home_url('/?page_id=2'); ?>">Страницы сайта</a></li>
+        <li><a href="<?php echo home_url(); ?>">Записи блога</a></li>
     </ul>
 </aside>
-```
-Скриншот:
-
-
-comments.php
-```
-<?php
-if ( comments_open() || get_comments_number() ) :
-    comments_template();
-endif;
-archive.php
-<?php get_header(); ?>
-<div class="container">
-    <main class="content">
-        <h2>Архив записей</h2>
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <article>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            </article>
-        <?php endwhile; endif; ?>
-    </main>
-    <?php get_sidebar(); ?>
-</div>
-<?php get_footer(); ?>
 Шаг 6. Стилизация темы
-body { font-family: Arial, sans-serif; margin:0; padding:0; }
-header, footer { background:#333; color:#fff; padding:15px; text-align:center; }
-.container { display:flex; gap:20px; padding:20px; }
-.content { flex:3; }
-.sidebar { flex:1; background:#f0f0f0; padding:15px; }
-.post, .page { margin-bottom:20px; }
-.sidebar-menu { list-style:none; padding:0; }
-.sidebar-menu li { margin-bottom:10px; }
-.sidebar-menu a { text-decoration:none; color:#333; }
-```
-Скриншот:
+
+Файл style.css содержит стили для:
+
+шапки и подвала,
+основного контента и карточек записей,
+боковой панели,
+комментариев.
+
+Скриншот VS Code:
 
 
 Шаг 7. Скриншот темы
-Файл screenshot.png добавлен в папку темы (usm-theme)
-Размер: 1200x900 px
-Показывает вид главной страницы с боковой панелью
+
+Добавлен файл screenshot.png в папку темы для отображения превью в WordPress.
+
+Структура папки темы:
+
+usm-theme/
+    archive.php
+    comments.php
+    footer.php
+    functions.php
+    header.php
+    index.php
+    page.php
+    sidebar.php
+    single.php
+    style.css
+    screenshot.png
 Шаг 8. Активация темы
-WordPress → Внешний вид → Темы
-Найти тему USM Theme
-Нажать Активировать
-
-Скриншот:
-
-
+Перейти в Appearance → Themes.
+Найти тему USM Theme.
+Нажать Activate.
+Открыть главную страницу сайта и проверить отображение темы.
 Контрольные вопросы
 
-1. Какие два файла являются обязательными для любой темы WordPress?
+1. Какие два файла обязательны для любой темы?
 
-index.php
 style.css
+index.php
 
-2. Как подключаются общие части шаблонов (header, footer, sidebar)?
+2. Как подключаются header, footer, sidebar?
 
-get_header(), get_footer(), get_sidebar()
+get_header()
+get_footer()
+get_sidebar()
 
-3. Чем отличаются index.php, single.php и page.php?
+3. Чем отличаются index.php, single.php, page.php?
 
-index.php — главный шаблон темы
-single.php — отдельная запись (пост)
-page.php — страницы сайта
+index.php — главный шаблон для всех страниц.
+single.php — шаблон отдельной записи.
+page.php — шаблон статической страницы.
 
-4. Зачем нужен файл functions.php в теме?
+4. Зачем нужен functions.php?
 
-Подключает стили и скрипты
-Регистрирует меню и виджеты
-Расширяет функционал темы без изменения ядра WordPress
+Подключает стили и скрипты, регистрирует меню и виджеты, расширяет функциональность темы.
+Выводы
+
+Была создана собственная тема WordPress со всеми обязательными файлами, дополнительными шаблонами, боковой панелью и стилями. Тема успешно активирована и отображает записи, страницы и комментарии.
+
+Библиография
+WordPress Documentation
+Theme Developer Handbook — Руководство по разработке тем
+Template Hierarchy — Иерархия шаблонов WordPress
+WordPress Codex — Справочник по функциям и структуре тем
