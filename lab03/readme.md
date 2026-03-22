@@ -90,23 +90,53 @@ $count ограничивает количество выводимых пост
 
 ### Шаг 6. Стилизация темы
 
-Файл style.css содержит стили для:
-шапки и подвала,
-основного контента и карточек записей,
-боковой панели,
-комментариев.
+На данном этапе мы добавляем оформление для всех основных элементов темы WordPress. Файл `style.css` содержит CSS-правила для:
 
+- **Шапки (header)** и **подвала (footer)** сайта;
+- Основного контента, включая блоки с последними записями и карточки записей;
+- **Боковой панели (sidebar)** с навигацией по сайту;
+- **Комментарии (comments)** — список комментариев и форма добавления нового комментария.
 
-### Шаг 7. Скриншот темы
+Пример кода из style.css:
+```css
+header{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
 
-Добавлен файл screenshot.png в папку темы для отображения превью в WordPress.
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
 
+.posts-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
 
-### Шаг 8. Активация темы
+.sidebar-box{
+    background:#f7f7f7;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+}
+```
+
+### Шаг 7. Активация темы
 Перейти в Appearance → Themes.
 Найти тему USM Theme.
 Нажать Activate.
 Открыть главную страницу сайта и проверить отображение темы.
+<img width="1419" height="1108" alt="image" src="https://github.com/user-attachments/assets/e0ce6c66-5612-46e8-84a1-d75c002c22f9" />
+
+![photo_5332303860967609432_w](https://github.com/user-attachments/assets/dcc326ef-4de4-4c5c-b4ff-b7f8c745b6ff)
+
 
 ## Контрольные вопросы
 ###### 1. Какие два файла обязательны для любой темы?
