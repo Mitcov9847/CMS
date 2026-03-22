@@ -79,7 +79,6 @@ define('WP_DEBUG', true);
 - `wp_head()` подключает стили, скрипты и плагины WordPress.
 - Начало основного блока сайта обёрнуто в `<main>`.
   
----
 ## `Файл footer.php`
 <img width="600" height="317" alt="image" src="https://github.com/user-attachments/assets/3a77b861-d443-4383-ac3a-2b8fe6cef07d" />
 
@@ -88,8 +87,7 @@ define('WP_DEBUG', true);
 - Выводит текущий год через `date('Y')`.
 - `wp_footer()` подключает скрипты и необходимые элементы перед закрытием страницы.
 - Закрывает теги `main`, `footer`, `body` и `html`.
-  
----
+
 
 ## Файл функций `functions.php`
 <img width="600" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
@@ -110,7 +108,6 @@ define('WP_DEBUG', true);
 - `home_url()` возвращает URL главной страницы сайта.
 - Используется в шаблонах через `get_sidebar()`.
 
----
   
 ## `page.php` — страница сайта
 <img width="600" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
@@ -121,7 +118,6 @@ define('WP_DEBUG', true);
 - Использует цикл WordPress для вывода заголовка (`the_title()`) и содержимого страницы (`the_content()`).
 - Подключает боковую панель и подвал.
   
----
 
 ## `sidebar.php` — боковая панель
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
