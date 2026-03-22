@@ -39,12 +39,12 @@ define('WP_DEBUG', true);
 <img width="200" height="132" alt="image" src="https://github.com/user-attachments/assets/4570c5f1-0529-459b-8a76-36d5651ebedd" />
 
 
-#### Файл style.css
+#### - Файл style.css
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
 
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/73763a76-c444-4b72-9fe0-442ee6d5d0ad" />
 
-#### Файл index.php
+#### - Файл index.php
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
 
 
@@ -54,10 +54,10 @@ WordPress Loop (have_posts() / the_post()) выводит последние з�
 $count ограничивает количество выводимых постов.
 
 ### Шаг 3. Общие части шаблонов
-#### Файл header.php
+#### - Файл header.php
 <img width="600" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
 
-#### Файл footer.php
+#### - Файл footer.php
 <img width="600" height="317" alt="image" src="https://github.com/user-attachments/assets/3a77b861-d443-4383-ac3a-2b8fe6cef07d" />
 
 ### Шаг 4. Файл функций functions.php
@@ -68,13 +68,13 @@ $count ограничивает количество выводимых пост
 
 ### Шаг 5. Дополнительные шаблоны
 
-#### single.php — страница сайта
+#### - single.php — страница сайта
 <img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
 
-#### page.php — страница сайта
+#### - page.php — страница сайта
 <img width="600" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
 
-#### sidebar.php — боковая панель
+#### - sidebar.php — боковая панель
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
 
 ### Шаг 6. Стилизация темы
@@ -87,7 +87,7 @@ $count ограничивает количество выводимых пост
 - **Комментарии (comments)** — список комментариев и форма добавления нового комментария.
 
 Пример кода из style.css:
-```css
+```
 header{
     background:#333;
     color:white;
