@@ -18,8 +18,6 @@
 - Проверена работа WordPress.
 - В папке `wp-content/themes` создана директория темы: `usm-theme`.
 
-**Скриншот VS Code:**  
-![Подготовка среды](./screenshots/step1.png)
 
 Включён режим отладки WordPress, изменён параметр в `wp-config.php`:
 
