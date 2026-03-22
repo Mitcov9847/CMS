@@ -77,7 +77,7 @@ $count ограничивает количество выводимых пост
 
 ### Шаг 5. Дополнительные шаблоны
 
-#### .php — страница сайта
+#### single.php — страница сайта
 <img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
 
 #### page.php — страница сайта
