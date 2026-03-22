@@ -194,10 +194,15 @@ footer{
 Нажать Activate.
 Открыть главную страницу сайта и проверить отображение темы.
 
+<img width="1160" height="549" alt="image" src="https://github.com/user-attachments/assets/baa65bd7-0fd4-4bf4-96ff-892f443ecf38" />
+
+<img width="1195" height="848" alt="image" src="https://github.com/user-attachments/assets/75ef314a-3e10-4d86-b0ce-127ee0b45d5b" />
+
 <img width="1419" height="1108" alt="image" src="https://github.com/user-attachments/assets/e0ce6c66-5612-46e8-84a1-d75c002c22f9" />
 
 ![photo_5332303860967609432_w](https://github.com/user-attachments/assets/dcc326ef-4de4-4c5c-b4ff-b7f8c745b6ff)
 
+![Uploading image.png…]()
 
 ## Контрольные вопросы
 ##### 1. Какие два файла обязательны для любой темы?
