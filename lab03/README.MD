@@ -10,7 +10,6 @@
 2. Скопировать папку темы `usm-theme` в `wp-content/themes`.
 3. Активировать тему в разделе **Appearance → Themes (Внешний вид → Темы)**.
 
----
 
 ## Ход работы
 
@@ -255,3 +254,5 @@ WordPress Documentation
 Theme Developer Handbook — Руководство по разработке тем
 Template Hierarchy — Иерархия шаблонов WordPress
 WordPress Codex — Справочник по функциям и структуре тем
+
+---
