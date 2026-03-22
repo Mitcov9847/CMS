@@ -257,9 +257,24 @@ single.php — шаблон отдельной записи.
 page.php — шаблон статической страницы.
 ```
 #### 4. Зачем нужен functions.php?
-
 Подключает стили и скрипты, регистрирует меню и виджеты, расширяет функциональность темы.
 
+### Список использованных источников
+
+1. **WordPress Documentation** — официальная документация по системе управления контентом WordPress.  
+   [https://wordpress.org/support/article/](https://wordpress.org/support/article/)
+
+2. **Theme Developer Handbook** — руководство по разработке пользовательских тем WordPress, включая структуру файлов и использование шаблонов.  
+   [https://developer.wordpress.org/themes/](https://developer.wordpress.org/themes/)
+
+3. **Template Hierarchy** — описание иерархии шаблонов WordPress, объясняющее работу файлов index.php, single.php, page.php и других шаблонов темы.  
+   [https://developer.wordpress.org/themes/basics/template-hierarchy/](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+
+4. **WordPress Codex** — справочник по функциям, структуре тем и возможностям системы управления контентом WordPress.  
+   [https://codex.wordpress.org/](https://codex.wordpress.org/)
+
+5. **Introduction to WordPress Themes** — введение в разработку тем WordPress и объяснение основных принципов работы тем.  
+   [https://developer.wordpress.org/themes/getting-started/](https://developer.wordpress.org/themes/getting-started/)
 ## Выводы
 
 Была создана собственная тема WordPress со всеми обязательными файлами, дополнительными шаблонами, боковой панелью и стилями. Тема успешно активирована и отображает записи, страницы и комментарии.
