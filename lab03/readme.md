@@ -48,13 +48,13 @@ usm-theme/
     style.css
     screenshot.png
 ```
-<img width="1288" height="756" alt="image" src="https://github.com/user-attachments/assets/71fe724b-cc16-4484-a372-bcf344fb5fc6" />
+<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/71fe724b-cc16-4484-a372-bcf344fb5fc6" />
 
 #### Файл style.css
-<img width="625" height="858" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
+<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
 
 #### Файл index.php
-<img width="774" height="836" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
+<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
 
 
 #### Пояснение:
