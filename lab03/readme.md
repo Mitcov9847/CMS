@@ -25,7 +25,6 @@
 define('WP_DEBUG', true);
 ```
 <img width="1266" height="149" alt="image" src="https://github.com/user-attachments/assets/dacdaff6-1d38-436d-9b39-730740ce414e" />
-
 Это позволяет видеть ошибки и предупреждения для упрощения разработки.
 
 ### Шаг 2. Создание обязательных файлов темы
@@ -35,169 +34,6 @@ style.css — содержит метаданные темы и базовые �
 index.php — главный шаблон темы, выводит контент сайта.
 
 Структура папки темы после создания:
-```
-usm-theme/
-    style.css
-    index.php
-```
-Файл style.css
-
-Пример содержимого:
-
-```
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-```
-Скриншот VS Code:
-
-
-Файл index.php
-
-Пример содержимого:
-```
-<?php get_header(); ?>
-
-<section class="posts-section">
-    <h2>Последние записи</h2>
-
-    <?php
-    $count = 0;
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-            if ($count == 5) break;
-    ?>
-        <div class="post-card">
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <p><?php the_excerpt(); ?></p>
-        </div>
-    <?php
-            $count++;
-        endwhile;
-    endif;
-    ?>
-</section>
-
-<?php get_footer(); ?>
-```
-Скриншот VS Code:
-
-
-###### Пояснение:
-get_header() и get_footer() подключают шапку и подвал.
-WordPress Loop (have_posts() / the_post()) выводит последние записи.
-$count ограничивает количество выводимых постов.
-
-### Шаг 3. Общие части шаблонов
-Файл header.php
-```
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php bloginfo('name'); ?></title>
-    <?php wp_head(); ?>
-</head>
-<body>
-<header>
-    <h1><?php bloginfo('name'); ?></h1>
-    <p><?php bloginfo('description'); ?></p>
-</header>
-<main>
-```
-Скриншот VS Code:
-
-Файл footer.php
-```
-</main>
-<footer>
-    <p>© <?php echo date('Y'); ?> USM Theme</p>
-</footer>
-<?php wp_footer(); ?>
-</body>
-</html>
-```
-Скриншот VS Code:
-
-
-### Шаг 4. Файл функций functions.php
-```
-<?php
-function usm_theme_styles() {
-    wp_enqueue_style('usm-style', get_stylesheet_uri());
-}
-add_action('wp_enqueue_scripts', 'usm_theme_styles');
-
-function usm_theme_menus() {
-    register_nav_menus(array(
-        'sidebar-menu' => 'Меню боковой панели'
-    ));
-}
-add_action('after_setup_theme', 'usm_theme_menus');
-```
-Скриншот VS Code:
-
-Пояснение:
-Подключает стили темы (style.css).
-Регистрирует меню для боковой панели.
-
-### Шаг 5. Дополнительные шаблоны
-single.php — отдельная запись
-```
-<?php get_header(); ?>
-<section class="content-page">
-    <div class="content-main">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <h3><?php the_title(); ?></h3>
-                <div><?php the_content(); ?></div>
-            </article>
-            <?php comments_template(); ?>
-        <?php endwhile; endif; ?>
-    </div>
-    <div class="content-side"><?php get_sidebar(); ?></div>
-</section>
-<?php get_footer(); ?>
-page.php — страница сайта
-<?php get_header(); ?>
-<section class="content-page">
-    <div class="content-main">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <h3><?php the_title(); ?></h3>
-                <div><?php the_content(); ?></div>
-            </article>
-        <?php endwhile; endif; ?>
-    </div>
-    <div class="content-side"><?php get_sidebar(); ?></div>
-</section>
-<?php get_footer(); ?>
-sidebar.php — боковая панель
-<aside class="sidebar-box">
-    <h3>Навигация</h3>
-    <ul>
-        <li><a href="<?php echo home_url(); ?>">Главная</a></li>
-        <li><a href="<?php echo home_url('/?page_id=2'); ?>">Страницы сайта</a></li>
-        <li><a href="<?php echo home_url(); ?>">Записи блога</a></li>
-    </ul>
-</aside>
-```
-### Шаг 6. Стилизация темы
-
-Файл style.css содержит стили для:
-шапки и подвала,
-основного контента и карточек записей,
-боковой панели,
-комментариев.
-
-Скриншот VS Code:
-
-### Шаг 7. Скриншот темы
-
-Добавлен файл screenshot.png в папку темы для отображения превью в WordPress.
-
-Структура папки темы:
 ```
 usm-theme/
     archive.php
@@ -212,6 +48,56 @@ usm-theme/
     style.css
     screenshot.png
 ```
+<img width="1288" height="756" alt="image" src="https://github.com/user-attachments/assets/71fe724b-cc16-4484-a372-bcf344fb5fc6" />
+
+Файл style.css
+<img width="625" height="858" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
+
+Файл index.php
+<img width="774" height="836" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
+
+
+###### Пояснение:
+get_header() и get_footer() подключают шапку и подвал.
+WordPress Loop (have_posts() / the_post()) выводит последние записи.
+$count ограничивает количество выводимых постов.
+
+### Шаг 3. Общие части шаблонов
+Файл header.php
+<img width="754" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
+
+Файл footer.php
+<img width="704" height="317" alt="image" src="https://github.com/user-attachments/assets/3a77b861-d443-4383-ac3a-2b8fe6cef07d" />
+
+### Шаг 4. Файл функций functions.php
+<img width="735" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
+Пояснение:
+Подключает стили темы (style.css).
+Регистрирует меню для боковой панели.
+
+### Шаг 5. Дополнительные шаблоны
+<img width="735" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
+
+###### page.php — страница сайта
+<img width="754" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
+
+###### sidebar.php — боковая панель
+<img width="757" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
+
+### Шаг 6. Стилизация темы
+
+Файл style.css содержит стили для:
+шапки и подвала,
+основного контента и карточек записей,
+боковой панели,
+комментариев.
+
+
+### Шаг 7. Скриншот темы
+
+Добавлен файл screenshot.png в папку темы для отображения превью в WordPress.
+
+
 ### Шаг 8. Активация темы
 Перейти в Appearance → Themes.
 Найти тему USM Theme.
