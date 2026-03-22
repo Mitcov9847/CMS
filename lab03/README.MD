@@ -27,7 +27,7 @@
 
 ```php
 define('WP_DEBUG', true);
-
+```
 Это позволяет видеть ошибки и предупреждения для упрощения разработки.
 
 Шаг 2. Создание обязательных файлов темы
@@ -38,33 +38,28 @@ style.css — содержит метаданные темы и базовые �
 index.php — главный шаблон темы, выводит контент сайта.
 
 Структура папки темы после создания:
-
+```
 usm-theme/
     style.css
     index.php
+```
 Файл style.css
 
 Пример содержимого:
 
-/*
-Theme Name: USM Theme
-Author: Student
-Description: Простая тема WordPress для лабораторной работы
-Version: 1.0
-*/
-
+```
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+```
 Скриншот VS Code:
 
 
 Файл index.php
 
 Пример содержимого:
-
+```
 <?php get_header(); ?>
 
 <section class="posts-section">
@@ -88,7 +83,7 @@ body {
 </section>
 
 <?php get_footer(); ?>
-
+```
 Скриншот VS Code:
 
 
@@ -99,6 +94,7 @@ WordPress Loop (have_posts() / the_post()) выводит последние з�
 $count ограничивает количество выводимых постов.
 Шаг 3. Общие части шаблонов
 Файл header.php
+```
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -112,11 +108,12 @@ $count ограничивает количество выводимых пост
     <p><?php bloginfo('description'); ?></p>
 </header>
 <main>
-
+```
 Скриншот VS Code:
 
 
 Файл footer.php
+```
 </main>
 <footer>
     <p>© <?php echo date('Y'); ?> USM Theme</p>
@@ -124,11 +121,12 @@ $count ограничивает количество выводимых пост
 <?php wp_footer(); ?>
 </body>
 </html>
-
+```
 Скриншот VS Code:
 
 
 Шаг 4. Файл функций functions.php
+```
 <?php
 function usm_theme_styles() {
     wp_enqueue_style('usm-style', get_stylesheet_uri());
@@ -141,7 +139,7 @@ function usm_theme_menus() {
     ));
 }
 add_action('after_setup_theme', 'usm_theme_menus');
-
+```
 Скриншот VS Code:
 
 
@@ -151,6 +149,7 @@ add_action('after_setup_theme', 'usm_theme_menus');
 Регистрирует меню для боковой панели.
 Шаг 5. Дополнительные шаблоны
 single.php — отдельная запись
+```
 <?php get_header(); ?>
 <section class="content-page">
     <div class="content-main">
@@ -188,6 +187,7 @@ sidebar.php — боковая панель
         <li><a href="<?php echo home_url(); ?>">Записи блога</a></li>
     </ul>
 </aside>
+```
 Шаг 6. Стилизация темы
 
 Файл style.css содержит стили для:
@@ -205,7 +205,7 @@ sidebar.php — боковая панель
 Добавлен файл screenshot.png в папку темы для отображения превью в WordPress.
 
 Структура папки темы:
-
+```
 usm-theme/
     archive.php
     comments.php
@@ -218,6 +218,7 @@ usm-theme/
     single.php
     style.css
     screenshot.png
+```
 Шаг 8. Активация темы
 Перейти в Appearance → Themes.
 Найти тему USM Theme.
@@ -231,11 +232,11 @@ style.css
 index.php
 
 2. Как подключаются header, footer, sidebar?
-
+```
 get_header()
 get_footer()
 get_sidebar()
-
+```
 3. Чем отличаются index.php, single.php, page.php?
 
 index.php — главный шаблон для всех страниц.
