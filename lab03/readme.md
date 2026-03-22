@@ -41,24 +41,43 @@ define('WP_DEBUG', true);
 
 #### - Файл style.css
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
+- Содержит метаданные темы: название, автор, описание, версия.
+- Определяет базовые CSS-правила для всех элементов сайта:
+  - `body` — шрифт, цвет текста, фон, отступы.
+  - `header` и `footer` — стили шапки и подвала.
+  - `main`, `.posts-section`, `.posts-container`, `.post-card` — оформление основного контента и карточек записей.
+  - `.sidebar-box` — стили боковой панели.
+  - `.comments-area` и `.comment-respond` — оформление комментариев и формы их добавления.
+- Позволяет задать сетку, тени, отступы и визуальное оформление блоков.
 
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/73763a76-c444-4b72-9fe0-442ee6d5d0ad" />
 
 #### - Файл index.php
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/5fae3865-9f9a-4ca3-909c-a92cac7a0c05" />
-
-
-#### Пояснение:
-get_header() и get_footer() подключают шапку и подвал.
-WordPress Loop (have_posts() / the_post()) выводит последние записи.
-$count ограничивает количество выводимых постов.
+- Содержит метаданные темы: название, автор, описание, версия.
+- Определяет базовые CSS-правила для всех элементов сайта:
+  - `body` — шрифт, цвет текста, фон, отступы.
+  - `header` и `footer` — стили шапки и подвала.
+  - `main`, `.posts-section`, `.posts-container`, `.post-card` — оформление основного контента и карточек записей.
+  - `.sidebar-box` — стили боковой панели.
+  - `.comments-area` и `.comment-respond` — оформление комментариев и формы их добавления.
+- Позволяет задать сетку, тени, отступы и визуальное оформление блоков.
 
 ### Шаг 3. Общие части шаблонов
 #### - Файл header.php
 <img width="600" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
-
+- Содержит шапку сайта и подключение всех стилей и скриптов.
+- HTML-документ начинается с `<!DOCTYPE html>` и `<html>`.
+- `bloginfo('name')` выводит название сайта, `bloginfo('description')` — описание.
+- `wp_head()` подключает стили, скрипты и плагины WordPress.
+- Начало основного блока сайта обёрнуто в `<main>`.
+- 
 #### - Файл footer.php
 <img width="600" height="317" alt="image" src="https://github.com/user-attachments/assets/3a77b861-d443-4383-ac3a-2b8fe6cef07d" />
+- Содержит подвал сайта и завершает структуру страницы.
+- Выводит текущий год через `date('Y')`.
+- `wp_footer()` подключает скрипты и необходимые элементы перед закрытием страницы.
+- Закрывает теги `main`, `footer`, `body` и `html`.
 
 ### Шаг 4. Файл функций functions.php
 <img width="600" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
@@ -70,13 +89,27 @@ $count ограничивает количество выводимых пост
 
 #### - single.php — страница сайта
 <img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
-
+- Боковая панель сайта.
+- Содержит блок навигации `<aside>`.
+- Список ссылок `<ul>` и `<li>` создаёт пункты меню.
+- `home_url()` возвращает URL главной страницы сайта.
+- Используется в шаблонах через `get_sidebar()`.
+- 
 #### - page.php — страница сайта
 <img width="600" height="490" alt="image" src="https://github.com/user-attachments/assets/4bed13c9-0532-4339-a20a-254846094271" />
-
+- Шаблон для статических страниц сайта (например, «О нас» или «Контакты»).
+- Структура почти идентична `single.php`.
+- Использует цикл WordPress для вывода заголовка (`the_title()`) и содержимого страницы (`the_content()`).
+- Подключает боковую панель и подвал.
+- 
 #### - sidebar.php — боковая панель
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/33579d27-964b-4098-8187-706cc8cee5b2" />
-
+- Боковая панель сайта.
+- Содержит блок навигации `<aside>`.
+- Список ссылок `<ul>` и `<li>` создаёт пункты меню.
+- `home_url()` возвращает URL главной страницы сайта.
+- Используется в шаблонах через `get_sidebar()`.
+- 
 ### Шаг 6. Стилизация темы
 
 На данном этапе мы добавляем оформление для всех основных элементов темы WordPress. Файл `style.css` содержит CSS-правила для:
