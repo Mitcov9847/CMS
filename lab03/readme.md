@@ -38,6 +38,7 @@ define('WP_DEBUG', true);
 
 <img width="200" height="132" alt="image" src="https://github.com/user-attachments/assets/4570c5f1-0529-459b-8a76-36d5651ebedd" />
 
+### Шаг 3. Дополнительные шаблоны
 
 ## 1. `style.css`
 <img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0bb2b2f2-aa4f-40b5-af6b-a5ea3e882815" />
@@ -68,8 +69,6 @@ define('WP_DEBUG', true);
 - Позволяет задать сетку, тени, отступы и визуальное оформление блоков.
 ---
 
-### Шаг 3. Общие части шаблонов
-
 ## 3. `header.php`
 <img width="600" height="516" alt="image" src="https://github.com/user-attachments/assets/33fe30d7-99ec-4bc9-96a6-886fd8cc5aa0" />
 
@@ -92,8 +91,6 @@ define('WP_DEBUG', true);
   
 ---
 
-### Шаг 4. 
-
 ## Файл функций `functions.php`
 <img width="600" height="281" alt="image" src="https://github.com/user-attachments/assets/c81ef7dc-9da7-4ae1-8862-b11321d227a0" />
 
@@ -101,7 +98,7 @@ define('WP_DEBUG', true);
 Подключает стили темы (style.css).
 Регистрирует меню для боковой панели.
 
-### Шаг 5. Дополнительные шаблоны
+### Шаг 4. Дополнительные шаблоны
 
 ## `single.php` — страница сайта
 <img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/6d8cf0ee-7cca-4f5c-bdda-247f3b86f67a" />
@@ -137,7 +134,7 @@ define('WP_DEBUG', true);
 - Используется в шаблонах через `get_sidebar()`.
 
   ---
-### Шаг 6. Стилизация темы
+### Шаг 5. Стилизация темы
 
 На данном этапе мы добавляем оформление для всех основных элементов темы WordPress. Файл `style.css` содержит CSS-правила для:
 
@@ -176,7 +173,7 @@ footer{
     padding:20px;
 }
 ```
-### Шаг 7. Скриншот темы
+### Шаг 6. Скриншот темы
 Для корректного отображения темы в административной панели WordPress необходимо добавить изображение-превью темы.
 Данный файл используется системой WordPress для отображения предварительного просмотра темы в разделе управления темами.
 
@@ -187,7 +184,7 @@ footer{
 <img width="248" height="442" alt="image" src="https://github.com/user-attachments/assets/2ea3b25e-b860-4c4d-921d-9603538afee0" />
 ```
 
-### Шаг 8. Активация темы
+### Шаг 7. Активация темы
 Перейти в Appearance → Themes.
 Найти тему USM Theme.
 Нажать Activate.
@@ -195,11 +192,11 @@ footer{
 
 <img width="1407" height="1054" alt="image" src="https://github.com/user-attachments/assets/d6ba38ea-d2f4-42c6-8328-6616ec75a75d" />
 
-### Шаг 9. Навигация, комментарии и вывод записей
+### Шаг 8. Навигация, комментарии и вывод записей
 
 На этом этапе описывается вся работа, проделанная по созданию навигации, отображению записей и подключению комментариев на сайте с пользовательской темой `usm-theme`.
 
-#### 9.1 Навигация
+#### 8.1 Навигация
 
 Для удобства пользователей была создана боковая панель сайта (sidebar).  
 В ней расположены ссылки на ключевые разделы:
@@ -214,7 +211,7 @@ footer{
 
 ---
 
-#### 9.2 Вывод записей
+#### 8.2 Вывод записей
 
 На главной странице реализован вывод последних публикаций блога:
 
